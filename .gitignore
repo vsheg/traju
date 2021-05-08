@@ -24,6 +24,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.poetry_cache
 
 # in project folder
 .poetry_cache
