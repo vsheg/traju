@@ -4,7 +4,6 @@
 
 
 * Free software: MIT license
-* Documentation: https://traju.readthedocs.io.
 
 
 ## Features

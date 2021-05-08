@@ -1,0 +1,42 @@
+[tool.poetry]
+name = 'traju'
+version = '0.1.0'
+description = 'traju makes manipulation with MD trajectories using AmberTools a little bit easier'
+authors = ['Vsevolod O. Shegolev <v.sheg@icloud.com>']
+license = 'MIT'
+readme = 'README.md'
+homepage = 'https://github.com/vsheg/traju'
+repository = 'https://github.com/vsheg/traju'
+documentation = 'https://github.com/vsheg/traju'
+classifiers = [
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+]
+
+keywords = ['trajectory-analysis', 'molecular-dynamics']
+
+[tool.poetry.dependencies]
+python = '>=3.9'
+
+[tool.poetry.dev-dependencies]
+pytest = '^6.2.4'
+tox = '^3.14'
+black = '21.5b0'
+
+[tool.poetry.scripts]
+traju = 'traju.cli:main'
+
+[build-system]
+build-backend = 'poetry.core.masonry.api'
+requires = [
+    'poetry-core>=1.0.0'
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = 'traju/.+\.pyi?$'
