@@ -3,8 +3,10 @@
 `traju` makes manipulation with MD trajectories using AmberTools a little bit easier.
 
 
-* Free software: MIT license
-
+## Installation
+```bash
+pip install -U traju
+```
 
 ## Features
 
