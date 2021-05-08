@@ -24,7 +24,10 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# in project folder
 .poetry_cache
+poetry.toml
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
