@@ -11,20 +11,6 @@ from typing import *
 from .helpers import *
 
 
-class Descriptor:
-    def __init__(self, args):
-        pass
-
-    def __set_name__(self, owner, name):
-        self.name = '_' + name
-
-    def __get__(self, obj, objtype=None):
-        getattr(obj, self.name)
-
-    def __set__(self, obj, val):
-        setattr(obj, self.name, val)
-
-
 logger = logging.getLogger(__name__)
 
 
@@ -124,7 +110,7 @@ STRICT: bool = args.strict  # stop if something went wrong at least with one tra
 # Computing parameters
 MAX_PROCS: int = args.max_procs
 
-# Save flags
+# Saving flags
 NEARBY: bool = args.nearby  # save out trajs in the same folder
 JOIN: bool = args.join  # join input trajs into one
 OVERWRITE: bool = args.overwrite  # replace original trajs with outs
@@ -134,7 +120,7 @@ TOP_EXTENTIONS: Iterable[str] = vector_like(args.top_exts)  # without preceding 
 TRAJ_EXTENTIONS: Iterable[str] = vector_like(args.traj_exts)  # too
 PREFIX: str = args.prefix
 POSTFIX: str = args.postfix
-TRAJ_OUT_EXT = args.ext
+TRAJ_OUT_EXT: str = args.ext
 
 #
 DEHYDRATE: bool = args.dehyd
@@ -189,5 +175,4 @@ def main():
 
 
 if __name__ == '__main__':
-
     sys.exit(main())  # pragma: no cover

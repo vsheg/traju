@@ -145,7 +145,8 @@ def out_filename(traj: Path, stem: Optional[str] = None) -> Path:
     ''' '''
     ext = TRAJ_OUT_EXT if TRAJ_OUT_EXT else traj.suffix
     stem = stem or traj.stem
-    return TRAJ_OUT_EXT + stem + POSTFIX + '.' + ext  # TODO: warn if bad ext
+    path = Path(TRAJ_OUT_EXT + stem + POSTFIX + '.' + ext)
+    return path  # TODO: warn if bad ext
 
 
 TASKS: list[tuple[Path, Path, Path]] = []  # container for tasks
